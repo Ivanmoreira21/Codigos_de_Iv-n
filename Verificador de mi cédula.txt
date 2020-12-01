@@ -1,0 +1,117 @@
+
+cedula="1313764522"
+print("Esta es mi cédula: ",cedula)
+
+#la función len nos permite obtener si la cédula tiene 10 digitos
+if(len(cedula)==10):
+  print("!Comenzemos con el proceso!")
+  print()
+  #extraemos los dos primeros dígitos de la cédula.
+  digito_region= cedula[0:2]
+  print("Estos son los dos primeros dígitos de la cédula: ",digito_region)
+  #luego sacamos el último dígito
+  último_digito= cedula[9]
+  último_digito=int(último_digito) 
+  print("Este es el último dígito de la cédula: ",último_digito)
+  
+  print()
+  if int(digito_region) >= 1 and int(digito_region) <= 24:  
+    print("----------------------")
+    print(f"{cedula} SI ES UNA CEDULA ECUATORIANA!")
+    print("")
+    print("Posiciones pares de la cédula")
+    #ahora voy a agrupar los números pares y los sumaré
+    #posicionespares!
+    digitos_par1= cedula[1:2]
+    digitos_par2=cedula[3:4]
+    digitos_par3=cedula[5:6]
+    digitos_par4= cedula[7:8]
+    print("Sumatoria de los numeros de las posiciones pares")
+    sumatoriapar=int(digitos_par1)+int(digitos_par2)+ int(digitos_par3)+int(digitos_par4)
+    print("{}+{}+{}+{}= {}".format(digitos_par1,digitos_par2,digitos_par3,digitos_par4,sumatoriapar))
+    print("Posiciones impares de la cédula")
+    #ahora voy a agrupar los números pares y los sumaré
+    #posicionespares!
+    numeroone= cedula[0:1]
+    numerotres= cedula[2:3]
+    numerocinco= cedula[4:5]
+    numerosiete= cedula[6:7]
+    numeronueve= cedula[8:9]
+    print(f"{numeroone} {numerotres} {numerocinco} {numerosiete} {numeronueve}")
+    print("------------------")
+    print()
+    print("Multiplicaciones y operaciones")
+    numeroone= cedula[0:1]
+    numeroonei=int(numeroone)*2
+    if int(numeroonei)>(9):
+      numeroone=int(numeroone)-9
+      print(numeroonei)
+    else:
+      print("{}*{}= {}".format(numeroone,2,numeroonei))
+  
+    numerotres= cedula[2:3]
+    numerotresi=int(numerotres)*2
+    if int(numerotresi)>(9):
+      numerotres=int(numerotresi)-9
+      print(numerotresi)
+    else:
+      print("{}*{}= {}".format(numerotres,2,numerotresi))
+
+    numerocinco= cedula[4:5]
+    numerocinco=int(numerocinco)*2
+    if int(numerocinco)>(9):
+      resta5=int(numerocinco)-9
+      print("{}-{}= {}".format(numerocinco,9,resta5))
+    else:
+      print(numerocinco)
+
+    numerosiete= cedula[6:7]
+    numerosietei=int(numerosiete)*2
+    if int(numerosietei)>(9):
+      numerosiete=int(numerosietei)-9
+      print(numerosietei)
+    else:
+      print("{}*{}= {}".format(numerosiete,2,numerosietei))
+  
+    numeronueve= cedula[8:9]
+    numeronuevei=int(numeronueve)*2
+    if int(numeronueve)>(9):
+      numeronueve=int(numeronueve)-9
+      print(numeronuevei)
+    else:
+      print("{}*{}= {}".format(numeronueve,2,numeronuevei))
+    print()
+    print("Sumatoria de los numeros de las posiciones impares")
+    sumatoriaimpar=int(numeroonei)+int(numerotresi)+ int(resta5)+int(numerosietei)+int(numeronuevei)
+    print("{}+{}+{}+{}+{}= {}".format(numeroonei,numerotresi,resta5,numerosietei,numeronuevei,sumatoriaimpar))
+  
+    #suma total
+    print("Sumatoria Total")
+    sumatotal= (sumatoriapar+sumatoriaimpar)
+    print("{}+{}={}".format(sumatoriapar,sumatoriaimpar,sumatotal))
+
+    #hay que obtener el inmediato superior de la sumatoria total para después restarla
+    inmediatosuperior=(sumatotal)/10
+    inmediatosuperior=int(inmediatosuperior+1)*10
+    print(inmediatosuperior)
+    print("calculo del digito verificador")
+    #calculo del digito verificador
+    DIGITOVERIFICADOR=inmediatosuperior-sumatotal
+    print("{}-{}={}".format(inmediatosuperior,sumatotal,DIGITOVERIFICADOR))
+    print("--------------")   
+    #Ahora hay que validar si el digito verificador es igual al de la cédula
+    if(DIGITOVERIFICADOR==10):
+      print("digito verificador es igual a 0")
+    else:
+      print()
+    if (int(DIGITOVERIFICADOR) == int(último_digito)):
+      print(f"mi {cedula} es correcta")
+    else:
+      print(f"mi {cedula} es incorrecta")
+      print("")
+
+    print("------------------")
+  else:
+    print("los dos primeros dígitos no están en el rango de cédulas ecuatorianas")
+else:
+  print("esta cédula tiene menos de 10 digitos")
