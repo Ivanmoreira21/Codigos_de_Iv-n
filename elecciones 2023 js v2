@@ -1,0 +1,33 @@
+
+let postulantes = prompt('Ingrese postulantes:');
+console.log();
+
+//valores predeterminados para los calculos
+let favor = 4;
+let en_contra = -1;
+let blanco = 0;
+let acumulador = 0;
+
+for (i = 1; i <= postulantes; i++) {
+  // Ingresos para solicitar respuestas
+  console.log('--Posultante #Número: ', i);
+  Correctas = prompt('Ingrese Correctas');
+  console.log(Correctas);
+  Incorrectas = prompt('Ingrese InCorrectas');
+  console.log(Incorrectas);
+  Blanco = prompt('Ingrese Blancas:');
+  console.log(Incorrectas);
+
+   puntajefinal=(Correctas *favor)+(Incorrectas*en_contra)+(Blanco*blanco);
+  console.log('puntaje final=', puntajefinal);
+  console.log('___________________________');
+  console.log();
+  acumulador = acumulador + puntajefinal;
+}
+
+console.log(
+  'Con',
+  [postulantes],
+  'entrevistados/postulantes se alcanza un puntaje final total de',
+  [acumulador]
+);
