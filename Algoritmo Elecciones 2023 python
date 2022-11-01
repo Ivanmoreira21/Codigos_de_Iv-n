@@ -1,0 +1,30 @@
+postulantes = 4
+#asumiendo que tengo 4 postulantes!!
+print()
+#valores asignados para las opciones de respuestas
+
+favor = 4  #respuestas a favor
+en_contra = -1  #respuestas en contra
+blanco = 0  #respuestas en blanco
+
+acum = 0
+for i in range(1, postulantes):
+  #Ingresos de respuestas por postulantes
+  print("Postulante Número ", i)
+  C = int(input("Respuestas correctas:"))
+  print(C)
+  I = int(input("Respuestas incorrectas:  "))
+  print(I)
+  B = int(input("Respuestas en blanco: "))
+  print(B)
+  #calculos
+  puntajefinal = (C * favor) + (I * en_contra) + (B * blanco)
+  print(
+    f"({C} x {favor}) + ({I} x {en_contra}) +({B } x {blanco})= {puntajefinal}"
+  )
+  print("Puntaje final para postulante#", i, "=", puntajefinal)
+  acum = acum + puntajefinal  #para que me vaya guardando los resultados
+
+  print("-----------------")
+  print()
+print(acum)
