@@ -1,0 +1,54 @@
+
+postulantes = int(input("Ingrese total de postulantes:  "))
+banco_preguntas=int(input("Ingrese un banco de preguntas:")) #defino una variable llamada banco de preguntas para ingresar un banco de preguntas.
+print("TU BANCO DE DE PREGUNTAS ES DE: ----", banco_preguntas,"----")
+print()
+#REGLAS: valores predeterminados para los calculos
+favor = 4
+en_contra = -1
+blanco = 0
+#Este acumulador me sirve para ir acumulando los puntajes.
+acumulador = 0 
+
+#Este for sirve para hacer el mismo proceso iterativo por cada número de postulantes.
+for i in range(1, postulantes):
+  #Ingresos para solicitar respuestas de los postulantes
+  print("###########################################################")
+  print()
+  print("Postulante Número ", i)
+  #Ingreso de respuestas en primera instancia
+  C = int(input("Respuestas correctas:"))
+  I = int(input("Respuestas incorrectas:  "))
+  B = int(input("Respuestas en blanco: "))
+  sumatoria_preguntas=C+I+B #primera sumatoria antes de validar
+  print("Tu sumatoria es de: ",  sumatoria_preguntas)
+ #La intención de este WHILE es que el banco de preguntas NO sea igual a la sumatoria de preguntas, es decir quiero que esta condición se cumpla. Con ello, al no ser iguales, la  permitirá ingresar de nuevo las respuestas hasta el banco de preguntas como la sumatoria sena iguales.
+  while banco_preguntas != sumatoria_preguntas: 
+        print("--------¡¡¡ALERTA!!!---------------")
+        print('El banco de preguntas no coincide con el número de respuestas a operar.');
+        print()
+        print("--------¡¡¡ALERTA!!!---------------")
+        #Nuevos ingresos en caso de equivocación.
+        print("Porfavor! INTRODUZCA DE NUEVO!")
+        C = int(input("Inserte de nuevo las respuestas correctas:"))
+        I = int(input(" Inserte de nuevo las respuestas incorrectas:  "))
+        B = int(input(" Inserte de nuevo las respuestas en blanco: "))
+        #nueva sumatoria que irá a preguntar en la condición del while.
+        sumatoria_preguntas=C+I+B
+        print("Ahora la sumatoria es: ", sumatoria_preguntas)
+  print(f"!!!!{banco_preguntas} coincide con {sumatoria_preguntas}!! ")
+  
+  #¡Se proceden a hacer los calculos   
+  puntajefinal = (C * favor) + (I * en_contra) + (B * blanco)
+  acumulador = acumulador + puntajefinal 
+  print(f"({C} x {favor}) + ({I} x {en_contra}) +({B } x {blanco})= {puntajefinal}")
+  print("Puntaje final para postulante #", i, "=", puntajefinal)
+  
+  
+print()
+print("################################################################")
+print("Finalmente los" ,[postulantes], "entrevistados acumulan un puntaje final total de",[acumulador], "puntos")
+
+
+        
+
