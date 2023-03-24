@@ -1,0 +1,130 @@
+
+import random
+
+bolillero_1= ['Flamengo', 'River Plate','Palmeiras', 'Boca Juniors', 
+'Nacional','Athletico Paranaense', 'Independiente del Valle', 'Olimpia']
+
+equipos_seleccionados = [ ]
+print("--------SORTEO BOLILLERO 1:---------")
+for i in range(8):
+    equipo = random.choice(bolillero_1)
+    #Cabezas de series.
+    equipos_seleccionados.append(equipo)
+    print("Sorteo ", i+1, ": ", equipo)
+    bolillero_1.remove(equipo)
+print()
+
+##########################################################################
+#SORTEO BOLILLERO 2
+
+bolillero_2=['Libertad', 'Atletico Nacional','Internacional', 'BarcelonaSC','Racing','Corinthians','Colo-Colo','Fluminense']
+
+equipos_seleccionados2 = [ ]
+print("--------SORTEO BOLILLERO 2:---------")
+for i in range(8):
+    equipo = random.choice(bolillero_2)
+    equipos_seleccionados2.append(equipo)
+    print("Sorteo ", i+1, ": ", equipo)
+    bolillero_2.remove(equipo)
+print()
+
+
+#######################################################################
+#SORTEO BOLILLERO 3
+
+bolillero_3= ['Bolivar', 'The Strongest','Melgar', 'Alianza Lima',
+'Argentinos Juniors','Metropolitanos','Aucas','Monagas']
+
+equipos_seleccionados3 = [ ]
+print("--------SORTEO BOLILLERO 3:---------")
+for i in range(8):
+    equipo = random.choice(bolillero_3)
+    equipos_seleccionados3.append(equipo)
+    print("Sorteo ", i+1, ": ", equipo)
+    bolillero_3.remove(equipo)
+print()
+
+
+#######################################################################
+#SORTEO BOLILLERO 4
+
+bolillero_4= ['Liverpool', 'Deportivo Pereira','Ñublense', 'Patronato',
+'Atlético Mineiro','Sporting Cristal','Cerro Porteño','Independiente de Medellín']
+
+
+equipos_seleccionados4 = [ ]
+print("--------SORTEO BOLILLERO 4:---------")
+for i in range(8):
+    equipo = random.choice(bolillero_4)
+    equipos_seleccionados4.append(equipo)
+    print("Sorteo ", i+1, ": ", equipo)
+    bolillero_4.remove(equipo)
+print()
+
+
+
+
+
+print("---------GRUPOS DE LA LIBERTADORES ORDENANDOLOS.---------------")
+print()
+print("GRUPO A: ")
+print("\n",equipos_seleccionados[0],
+      "\n",equipos_seleccionados2[0],
+      "\n",equipos_seleccionados3[0],
+      "\n",equipos_seleccionados4[0])
+print()
+
+
+print("GRUPO B: ")
+print("\n",equipos_seleccionados[1],
+      "\n",equipos_seleccionados2[1],
+      "\n",equipos_seleccionados3[1],
+      "\n",equipos_seleccionados4[1])
+print()
+
+
+print("GRUPO C: ")
+print("\n",equipos_seleccionados[2],
+      "\n",equipos_seleccionados2[2],
+      "\n",equipos_seleccionados3[2],
+      "\n",equipos_seleccionados4[2])
+print()
+
+
+
+print("GRUPO D: ")
+print("\n",equipos_seleccionados[3],
+      "\n",equipos_seleccionados2[3],"\n",
+     equipos_seleccionados3[3],
+      "\n",equipos_seleccionados4[3])
+print()
+
+
+print("GRUPO E: ")
+print("\n",equipos_seleccionados[4],
+      "\n",equipos_seleccionados2[4],
+      "\n",equipos_seleccionados3[4],
+      "\n",equipos_seleccionados4[4])
+
+
+
+print()
+print("GRUPO F: ")
+print("\n",equipos_seleccionados[5],
+      "\n",equipos_seleccionados2[5],
+      "\n",equipos_seleccionados3[5],
+      "\n",equipos_seleccionados4[5])
+print()
+
+print("GRUPO G: ")
+print("\n",equipos_seleccionados[6],
+      "\n",equipos_seleccionados2[6],
+      "\n", equipos_seleccionados3[6],
+      "\n",equipos_seleccionados4[6])
+print()
+print("GRUPO H: ")
+print("\n",equipos_seleccionados[7],
+      "\n",equipos_seleccionados2[7],
+      "\n",equipos_seleccionados3[7],
+      "\n",equipos_seleccionados4[7])
+print()
