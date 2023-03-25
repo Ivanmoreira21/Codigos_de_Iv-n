@@ -1,0 +1,25 @@
+Notafinal = float(input("Ingrese su calificación final: "))
+
+if Notafinal < 40:
+    print("Lo siento, ha reprobado el curso con una nota menor a 40.")
+else:
+    while not (40 <= Notafinal and Notafinal < 70): #es decir entre 40 y 69
+        Notafinal = float(input("Ingrese su calificación final (entre 40 y 100): "))
+
+    if Notafinal >= 70:
+        print("¡Felicitaciones! Usted ha aprobado el curso.")
+    else:
+        print("Usted no ha aprobado el curso.")
+
+        Notarecuperacion = float(input("Ingrese su calificación de recuperación (entre 0 y 100): "))
+
+        while not (0 <= Notarecuperacion and Notarecuperacion <=100): #es decir entre 0 y 100
+            Notarecuperacion = float(input("Ingrese una calificación de recuperación válida (entre 0 y 100): "))
+
+        PromedioR = (Notafinal + Notarecuperacion) / 2
+        print("La suma de {} y {} dividido entre 2 es: {}".format(Notafinal,  Notarecuperacion, PromedioR))
+
+        if PromedioR >= 70:
+            print("¡Felicitaciones! Usted ha aprobado el curso.")
+        else:
+            print("Lo siento, ha reprobado el curso definitivamente.")
