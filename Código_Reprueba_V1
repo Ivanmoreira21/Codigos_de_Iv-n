@@ -1,0 +1,46 @@
+
+#Verificador de la calificación o promedio de la UNEMI Verificar si alguien aprueba o no.
+
+#1. Pedir al usuario que ingrese su promedio final.
+#2. Verificar si este promedio es mayor o igual 70 e  revisar la condicion de aprobado o repronado.
+#3. Si la calificación es menor que 70, ingrese examen de recuperación.
+#4. Ingrese la nota del examen de recuperación.Se pide la calificación.
+#5. Se realiza el calculo de la nota de su promedio final entre los dos parciales + la nota de recuperación
+#Verificar si esa calificación(promediada) sirve para aprobar o reprobar el curso.
+
+#Variables
+#Notafinal es la nota de los dos parciales. Validada de 0-100.
+#NotaRecuperación es la nota que obtuvo del examen recuperación.
+#Promedio es donde se realizará el cálculo de ambos notas(línea12 y 13) para después promediarse por dos.
+
+'¡Empecemos!'
+
+Notafinal = float(input("Ingrese su calificación final:"))
+
+if Notafinal >= 70 and Notafinal <= 100:
+  print()
+  print("Usted ha aprobado el curso")
+else:
+  print()
+  print("Usted ha perdido el curso")
+  while not (40 <= Notafinal and Notafinal < 70):
+    Notafinal = float(input("Vuelva a ingresar su nota de recuperación: "))
+  print("Usted entra a recuperación.")
+  print("--------------------------")
+  Notarecuperacion= float(input("¿Cuanto se sacó en recuperación?: "))
+  print("--------------------------")
+  
+  while not (0 <= Notarecuperacion and Notarecuperacion <=100):
+    Notarecuperacion=int(input("Vuelva a ingresar una nota válida"))
+    #hagame el calculo
+  PromedioR = (Notafinal+Notarecuperacion)/2
+  print("--------------------")
+  print("La suma de {} y {} dividido entre 2 es: {}".format(Notafinal,  Notarecuperacion, PromedioR))
+  if PromedioR >= 70:
+    print("Aprobó recuperación!")
+  else:
+    print("Reprobó la materia definitivamente")
+
+  
+
+
