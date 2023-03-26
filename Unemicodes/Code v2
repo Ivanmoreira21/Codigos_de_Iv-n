@@ -1,0 +1,27 @@
+
+#Verificador de la calificación o promedio de la UNEMI Verificar si alguien aprueba o no.
+
+Notafinal = float(input("Ingrese su calificación final: "))
+
+if Notafinal < 39.5:
+    print("Lo siento, ha reprobado el curso con una nota menor a 40.")
+elif Notafinal >= 69.5:
+    print("¡Felicitaciones! Usted ha aprobado el curso.")
+else:
+    print("")
+    print("USTED SE QUEDÓ A RECUPERACIÓN")
+    print("---------------------------------")
+    Notarecuperacion = float(input("Ingrese su calificación de recuperación (entre 0 y 100): "))
+
+    while not (0 <= Notarecuperacion and Notarecuperacion <=100): #es decir entre 0 y 100
+        Notarecuperacion = float(input("Ingrese una calificación de recuperación válida (entre 0 y 100): "))
+    Sumatoria =(Notafinal + Notarecuperacion)
+    PromedioR = Sumatoria/ 2
+    print("")
+    print("---------------------------------")
+    print("La suma de {} y {} es {} y dividido entre 2 es: {}".format(Notafinal,  Notarecuperacion,Sumatoria ,PromedioR))
+
+    if PromedioR >= 69.5:
+        print("¡Felicitaciones! Usted ha aprobado el curso.")
+    else:
+        print("Lo siento con", PromedioR, "usted ha reprobado el curso definitivamente.")
