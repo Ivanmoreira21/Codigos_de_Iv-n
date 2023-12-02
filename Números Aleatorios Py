@@ -1,0 +1,10 @@
+import random
+
+# Genera una lista de 80 núeros aleatorios entre 10 y 30 años.
+edades = [random.randint(10, 30) for _ in range(80)]
+print(edades)
+
+# Imprime la cantidad total de datos en el conjunto
+print(f"Cantidad de datos en el conjunto: {len(edades)}")
+
+#CABE RECALCAR QUE PUEDES CAMBIAR EL INTERVALO Y EL TOTAL DE NUMEROS ALEATORIOS QUE QUISIERAS GENERAR. ESO YA DEPENDE DE TU GUSTO.
